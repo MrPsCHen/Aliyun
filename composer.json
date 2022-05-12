@@ -1,0 +1,26 @@
+{
+    "name": "doit/aliyun",
+    "description": "This is SDK for Aliyun",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Doit\\Aliyun\\": "src/",
+            "Doit\\Aliyun\\Sms\\": "src/Sms/"
+        }
+    },
+    "authors": [
+        {
+            "name": "cps",
+            "email": "cps_1993@126.com"
+        }
+    ],
+    "minimum-stability": "dev",
+
+    "require-dev": {
+        "php": "^8.1"
+    },
+    "require": {
+        "guzzlehttp/guzzle": "master"
+    }
+}
