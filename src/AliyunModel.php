@@ -83,7 +83,7 @@ abstract class AliyunModel
      *
      * @throws GuzzleException
      */
-    public function requestGet(string $endPoint,$query = null): AliyunResult
+    private function requestGet(string $endPoint,$query = null): AliyunResult
     {
         $response = (new Client())->request('get',$endPoint,[
             'query'=>$query,
@@ -92,15 +92,13 @@ abstract class AliyunModel
 
         $result = json_decode($response->getBody()->getContents());
 
-//        var_export($result);
-//        exit;
         return $this->stdClassCover($result,new AliyunResult());
     }
 
     /**
      *
      */
-    public function requestPost()
+    private function requestPost(): void
     {
 
     }
